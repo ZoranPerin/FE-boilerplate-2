@@ -135,6 +135,10 @@
 
 			}
 
+			&-0 {
+				margin-left: 0;
+			}
+
 		}
 
 	}
@@ -159,6 +163,10 @@
 						@include column-offset($i);
 					}
 
+				}
+
+				&-0 {
+					margin-left: 0;
 				}
 
 			}
@@ -187,6 +195,10 @@
 						@include column-offset($i);
 					}
 
+				}
+
+				&-0 {
+					margin-left: 0;
 				}
 
 			}
