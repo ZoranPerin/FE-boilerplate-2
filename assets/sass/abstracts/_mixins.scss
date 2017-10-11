@@ -55,8 +55,8 @@
 	margin-left: calc(100% / (#{$grid-columns} / #{$value}));
 }
 
-// @include flex(flex, row, wrap, space-between, center);
-@mixin flex($display, $flex-direction: null, $flex-wrap: null, $justify-content: null, $align-items: null, $align-content: null) {
+// @include flex(flex, row, wrap, flex-start, center);
+@mixin flex($display, $flex-direction, $flex-wrap, $justify-content, $align-items, $align-content: null) {
 
 	@if $display == 'inline-flex' {
 		display: inline-flex;
