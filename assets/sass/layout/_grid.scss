@@ -25,27 +25,18 @@
     }
 
     &-fluid {
-
 		margin-right: auto;
 		margin-left: auto;
 		max-width: 100%;
-	    padding-left: $grid-column-gutter;
-	    padding-right: $grid-column-gutter;
 	    position: relative;
 	    width: 100%;
-
-	    @include breakpoint(xs) {
-		    padding-left: $grid-column-gutter/2;
-		    padding-right: $grid-column-gutter/2;
-	    }
-
 	}
 
 }
 
 .row {
 
-	@include flex(flex, row, wrap, flex-start, top);
+	@include flex(flex, row, wrap, flex-start, flex-start);
 	margin-left: -$grid-column-gutter/2;
 	margin-right: -$grid-column-gutter/2;
 
