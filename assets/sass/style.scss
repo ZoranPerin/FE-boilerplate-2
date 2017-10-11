@@ -1,0 +1,32 @@
+@charset 'UTF-8';
+
+// configuration
+@import
+	'abstracts/variables',
+	'abstracts/mixins';
+
+// vendor
+@import
+	'vendor/normalize';
+
+// base
+@import
+	'base/base',
+	'base/typography',
+	'base/helpers';
+
+// layout
+@import
+	'layout/grid',
+	'layout/header',
+	'layout/navigation',
+	'layout/footer';
+
+// components
+@import
+	'components/button',
+	'components/form';
+
+// page-specific
+@import
+	'pages/home';

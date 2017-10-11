@@ -1,0 +1,48 @@
+// Font
+$font-family: 'Open Sans', sans-serif;
+$font-size: 16px;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-semibold: 600;
+$font-weight-bold: 700;
+$line-height: 1.4;
+
+// Colors
+$color-background: #fff;
+$color-primary: #29b9e3;
+$color-text: #555;
+$color-link-default: #29b9e3;
+$color-link-hover: #df4a1c;
+$color-hr: #ccc;
+$color-heading: #333;
+$color-line: #ccc;
+$color-facebook: #3b5998;
+$color-twitter: #1da1f2;
+$color-pinterest: #bd081c;
+$color-linkedin: #0077b5;
+$color-googleplus: #dd4b39;
+$color-instagram: #833ab4;
+
+// Margins
+$margin: 30px;
+$padding: 30px;
+
+// Image path
+$image-path: '../images/';
+
+// Retina image suffix
+$image-suffix: '-2x';
+
+// Font path
+$font-path: '../fonts/';
+
+
+// Grid
+$grid-columns: 12;
+$grid-column-gutter: 30px;
+
+// break points
+$xs: 575px;
+$sm: 767px;
+$md: 991px;
+$lg: 1199px;

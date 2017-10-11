@@ -1,0 +1,81 @@
+body {
+    background: $color-background;
+    color: $color-text;
+    font-family: $font-family;
+    font-size: $font-size;
+    font-weight: $font-weight-normal;
+    line-height: $line-height;
+    text-align: left;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    color: $color-heading;
+    font-weight: $font-weight-bold;
+    line-height: 1.1;
+    margin: $margin 0;
+}
+
+h1 {
+    font-size: 2.2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
+}
+
+a {
+
+	transition: all .3s ease;
+
+	&:link,
+	&:visited {
+		color: $color-link-default;
+	}
+
+	&:hover,
+	&:active {
+		color: $color-link-hover;
+		text-decoration: underline;
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+}
+
+p {
+    margin: $margin 0;
+}
+
+b,
+bold,
+strong {
+    font-weight: $font-weight-bold;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid $color-hr;
+    margin: $margin auto;
+	padding: 0;
+}
