@@ -15,21 +15,21 @@
 }
 
 // @include breakpoint(sm) {}
-@mixin breakpoint($class) {
+@mixin breakpoint($value) {
 
-    @if $class == xs {
+    @if $value == xs {
         @media (max-width: $xs) { @content; }
     }
 
-    @if $class == sm {
+    @if $value == sm {
         @media (max-width: $sm) { @content; }
     }
 
-    @if $class == md {
+    @if $value == md {
         @media (max-width: $md) { @content; }
     }
 
-    @if $class == lg {
+    @if $value == lg {
         @media (max-width: $lg) { @content; }
     }
 
@@ -83,14 +83,14 @@
 }
 
 // @include link-color(#fff, #999);
-@mixin link-color($color1, $color2) {
+@mixin link-color($value1, $value2) {
 	&:link,
 	&:visited {
-		color: $color1;
+		color: $value1;
 	}
 	&:hover,
 	&:active {
-		color: $color2;
+		color: $value2;
 	}
 }
 
