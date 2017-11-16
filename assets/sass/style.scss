@@ -5,12 +5,9 @@
 	'abstracts/variables',
 	'abstracts/mixins';
 
-// vendor
-@import
-	'vendor/normalize';
-
 // base
 @import
+	'base/normalize',
 	'base/base',
 	'base/typography',
 	'base/helpers';
