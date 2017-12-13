@@ -46,7 +46,6 @@
 
 // @include column(2);
 @mixin column($value) {
-	flex-basis: calc(100% / (#{$grid-columns} / #{$value}));
 	width: calc(100% / (#{$grid-columns} / #{$value}));
 }
 

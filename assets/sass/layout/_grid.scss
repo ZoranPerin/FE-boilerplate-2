@@ -207,7 +207,6 @@
 			@for $i from 1 through $grid-columns {
 
 				&-#{$i} {
-					flex-basis: 100%;
 					width: 100%;
 				}
 
