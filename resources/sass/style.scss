@@ -1,29 +1,18 @@
-@charset 'UTF-8';
-
-// configuration
 @import
 	'abstracts/variables',
-	'abstracts/mixins';
+	'abstracts/mixins',
 
-// base
-@import
 	'base/normalize',
 	'base/base',
 	'base/typography',
-	'base/helpers';
+	'base/helpers',
 
-// layout
-@import
 	'layout/grid',
 	'layout/header',
 	'layout/navigation',
-	'layout/footer';
+	'layout/footer',
 
-// components
-@import
 	'components/button',
-	'components/form';
+	'components/form',
 
-// page-specific
-@import
 	'pages/home';

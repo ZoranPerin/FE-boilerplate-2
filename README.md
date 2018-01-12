@@ -2,7 +2,7 @@
 A simple boilerplate for Front-end web development, powered by Gulp, Sass and Flexbox.
 
 ## Installation
-Once you have files simple go to console and open directory where you unpacked files. You will need NPM for this so if you are not familiar with NPM, please read about it on [NPM documentation](https://www.npmjs.com/). So, you need to run `npm install` to get all of the dependencies. Once NPM installs everything needed, you simple run `gulp` and your assets are generated. Gulp will generate directore `assets` with CSS, combined and compressed Javascript and will copy all images, fonts, etc.
+Once you have files simple go to console and open directory where you unpacked files. You will need NPM for this so if you are not familiar with NPM, please read about it on [NPM documentation](https://www.npmjs.com/). So, you need to run `npm install` to get all of the dependencies. Once NPM installs everything needed, run `gulp` and your assets are generated. Gulp will generate directory `assets` with CSS, combined and compressed Javascript and will copy all images, fonts, etc.
 
 It is handy to have watcher while you change your code, so if you want this simple run `gulp watch`. When you finish the project and want to build assets for production, run `gulp build`.
 
