@@ -31,7 +31,7 @@ gulp.task('scss', function () {
 
 // js
 gulp.task('js', function () {
-    return gulp.src([config.resources + 'js/vendor/*.js', config.resources + 'js/script.js'])
+    return gulp.src([config.resources + 'js/vendor/*.js', config.resources + 'js/*.js'])
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(gulp.dest(config.destination + 'js'));
@@ -72,7 +72,7 @@ gulp.task('build', function () {
         ]))
         .pipe(gulp.dest(config.destination + 'images'));
 
-    var js = gulp.src([config.resources + 'js/vendor/*.js', config.resources + 'js/script.js'])
+    var js = gulp.src([config.resources + 'js/vendor/*.js', config.resources + 'js/*.js'])
         .pipe(concat('scripts.js'))
         .pipe(uglify())
         .pipe(gulp.dest(config.destination + 'js'));
