@@ -48,9 +48,7 @@
 
 .mobile-hide {
 
-    display: block;
-
-    @include breakpoint(xs) {
+    @include breakpoint(sm) {
         display: none !important;
     }
 
@@ -60,7 +58,7 @@
 
     display: none;
 
-    @include breakpoint(xs) {
+    @include breakpoint(sm) {
         display: block;
     }
 
