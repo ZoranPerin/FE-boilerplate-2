@@ -1,17 +1,11 @@
-// gulp
+// dependencies
 var gulp = require('gulp');
 var merge = require('merge-stream');
-
-// sass
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
-
-// javascript
 var uglify = require('gulp-uglify');
-
-// images
 var imagemin = require('gulp-imagemin');
 
 // config
@@ -45,7 +39,7 @@ gulp.task('images', function () {
 
 // fonts
 gulp.task('fonts', function () {
-    return gulp.src(config.resources + 'fonts/*')
+    return gulp.src(config.resources + 'fonts/**/*')
         .pipe(gulp.dest(config.destination + 'fonts'))
 });
 
@@ -57,7 +51,7 @@ gulp.task('watch', function () {
     gulp.watch('resources/sass/**/*.scss', ['scss']);
     gulp.watch('resources/js/**/*.js', ['js']);
     gulp.watch('resources/images/**/*', ['images']);
-    gulp.watch('resources/fonts/*', ['fonts']);
+    gulp.watch('resources/fonts/**/*', ['fonts']);
 });
 
 // build
@@ -83,7 +77,7 @@ gulp.task('build', function () {
         .pipe(autoprefixer())
         .pipe(gulp.dest(config.destination + 'css'));
 
-    var fonts = gulp.src(config.resources + 'fonts/*')
+    var fonts = gulp.src(config.resources + 'fonts/**/*')
         .pipe(gulp.dest(config.destination + 'fonts'));
 
     return merge(img, js, css, fonts);
