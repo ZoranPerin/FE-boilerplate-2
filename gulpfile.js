@@ -6,7 +6,7 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var uglify = require('gulp-uglify');
-var imagemin = require('gulp-imagemin');
+var gcmq = require('gulp-group-css-media-queries');
 
 // config
 config = {
@@ -18,6 +18,7 @@ config = {
 gulp.task('scss', function () {
     return gulp.src(config.resources + 'sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(gcmq())
         .pipe(cssnano())
         .pipe(autoprefixer())
         .pipe(gulp.dest(config.destination + 'css'))
@@ -52,34 +53,4 @@ gulp.task('watch', function () {
     gulp.watch('resources/js/**/*.js', ['js']);
     gulp.watch('resources/images/**/*', ['images']);
     gulp.watch('resources/fonts/**/*', ['fonts']);
-});
-
-// build
-gulp.task('build', function () {
-
-    var img = gulp.src(config.resources + 'images/**/*')
-        .pipe(imagemin([
-            imagemin.gifsicle({ interlaced: true }),
-            imagemin.jpegtran({ progressive: true }),
-            imagemin.optipng({ optimizationLevel: 5 }),
-            imagemin.svgo({plugins: [{ removeViewBox: true }]})
-        ]))
-        .pipe(gulp.dest(config.destination + 'images'));
-
-    var js = gulp.src([config.resources + 'js/vendor/*.js', config.resources + 'js/*.js'])
-        .pipe(concat('scripts.js'))
-        .pipe(uglify())
-        .pipe(gulp.dest(config.destination + 'js'));
-
-    var css = gulp.src(config.resources + 'sass/**/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(cssnano())
-        .pipe(autoprefixer())
-        .pipe(gulp.dest(config.destination + 'css'));
-
-    var fonts = gulp.src(config.resources + 'fonts/**/*')
-        .pipe(gulp.dest(config.destination + 'fonts'));
-
-    return merge(img, js, css, fonts);
-
 });
