@@ -35,15 +35,6 @@
 
 }
 
-// @include clearfix;
-@mixin clearfix {
-	&::after {
-		clear: both;
-		content: "";
-		display: table;
-	}
-}
-
 // @include column(2);
 @mixin column($value) {
 	width: calc(100% / (#{$grid-columns} / #{$value}));
@@ -56,18 +47,15 @@
 
 // @include flex(flex, row, wrap, flex-start, flex-start);
 @mixin flex($display, $flex-direction, $flex-wrap, $justify-content, $align-items, $align-content: null) {
-
 	@if $display == 'inline-flex' {
 		display: inline-flex;
 	} @else {
 		display: flex;
 	}
-
 	flex-flow: $flex-direction $flex-wrap;
 	justify-content: $justify-content;
 	align-items: $align-items;
 	align-content: $align-content;
-
 }
 
 // @include hidpi(1.3)

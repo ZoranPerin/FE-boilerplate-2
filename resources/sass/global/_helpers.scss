@@ -1,65 +1,165 @@
-.text-left {
-	text-align: left;
+.align {
+
+    &-left {
+    	text-align: left;
+    }
+
+    &-right {
+    	text-align: right;
+    }
+
+    &-center {
+    	text-align: center;
+    }
+
+    &-justify {
+    	text-align: justify;
+    }
+
 }
 
-.text-right {
-	text-align: right;
+.text {
+
+    &-uppercase {
+    	text-transform: uppercase;
+    }
+
+    &-lowercase {
+    	text-transform: lowercase;
+    }
+
+    &-capitalize {
+    	text-transform: capitalize;
+    }
+
 }
 
-.text-center {
-	text-align: center;
-}
+.margin {
 
-.text-justify {
-	text-align: justify;
-}
+    &-bottom {
 
-.text-uppercase {
-	text-transform: uppercase;
-}
+        &-5 {
+            margin-bottom: 5px;
+        }
 
-.text-lowercase {
-	text-transform: lowercase;
-}
+        &-10 {
+            margin-bottom: 10px;
+        }
 
-.text-capitalize {
-	text-transform: capitalize;
-}
+        &-15 {
+            margin-bottom: 15px;
+        }
 
-.float-left {
-	float: left;
-}
+        &-20 {
+            margin-bottom: 20px;
+        }
 
-.float-right {
-	float: right;
-}
+    }
 
-.float-none {
-	float: none;
-}
+    &-left {
 
-.clearfix {
-	@include clearfix();
+        &-5 {
+            margin-left: 5px;
+        }
+
+        &-10 {
+            margin-left: 10px;
+        }
+
+        &-15 {
+            margin-left: 15px;
+        }
+
+        &-20 {
+            margin-left: 20px;
+        }
+
+    }
+
+    &-right {
+
+        &-5 {
+            margin-right: 5px;
+        }
+
+        &-10 {
+            margin-right: 10px;
+        }
+
+        &-15 {
+            margin-right: 15px;
+        }
+
+        &-20 {
+            margin-right: 20px;
+        }
+
+    }
+
+    &-top {
+
+        &-5 {
+            margin-top: 5px;
+        }
+
+        &-10 {
+            margin-top: 10px;
+        }
+
+        &-15 {
+            margin-top: 15px;
+        }
+
+        &-20 {
+            margin-top: 20px;
+        }
+
+    }
+
 }
 
 .responsive-img {
     @include responsive-img();
 }
 
-.mobile-hide {
+.mobile {
 
-    @include breakpoint(sm) {
-        display: none !important;
+    &-hide {
+
+        @include breakpoint(sm) {
+            display: none !important;
+        }
+
+    }
+
+    &-show {
+
+        display: none;
+
+        @include breakpoint(sm) {
+            display: block;
+        }
+
     }
 
 }
 
-.mobile-show {
+.flex {
 
-    display: none;
+	&-start {
+		@include flex(flex, row, wrap, flex-start, center);
+	}
 
-    @include breakpoint(sm) {
-        display: block;
-    }
+	&-space {
+		@include flex(flex, row, wrap, space-between, center);
+	}
+
+    &-around {
+		@include flex(flex, row, wrap, space-around, center);
+	}
+
+	&-end {
+		@include flex(flex, row, wrap, flex-end, center);
+	}
 
 }
