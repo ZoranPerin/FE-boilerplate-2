@@ -3,8 +3,8 @@
 	margin-right: auto;
 	margin-left: auto;
 	max-width: $lg + 1 - $grid-column-gutter;
-    padding-left: $grid-column-gutter;
-    padding-right: $grid-column-gutter;
+    padding-left: $grid-column-gutter/2;
+    padding-right: $grid-column-gutter/2;
     position: relative;
 
     @include breakpoint(lg) {
@@ -20,8 +20,8 @@
     }
 
     @include breakpoint(xs) {
-	    padding-left: $grid-column-gutter/2;
-	    padding-right: $grid-column-gutter/2;
+	    padding-left: 20px;
+	    padding-right: 20px;
     }
 
     &-fluid {

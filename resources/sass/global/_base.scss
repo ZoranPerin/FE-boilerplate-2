@@ -43,18 +43,8 @@ h6 {
 
 a {
 
+    @include link-color($color-link-default, $color-link-hover, none, underline);
 	transition: all .3s ease;
-
-	&:link,
-	&:visited {
-		color: $color-link-default;
-	}
-
-	&:hover,
-	&:active {
-		color: $color-link-hover;
-		text-decoration: underline;
-	}
 
 	&:focus {
 		outline: none;
