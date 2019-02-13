@@ -1,5 +1,8 @@
 # FE-boilerplate-2
-A simple boilerplate for Front-end web development, powered by Gulp, Sass and Flexbox.
+A simple boilerplate for Front-end web development, powered by Gulp (version 3.x.x.), Sass and Flexbox.
+
+## Important
+This version of boilerplate uses Gulp version 3.x.x. If you have Gulp 4 on machine this won't work and it needs to be adjusted!
 
 ## Installation
 Once you have files simple go to console and open directory where you unpacked files. You will need NPM for this so if you are not familiar with NPM, please read about it on [NPM documentation](https://www.npmjs.com/). So, you need to run `npm install` to get all of the dependencies. Once NPM installs everything needed, run `gulp` and your assets are generated. Gulp will generate directory `assets` with CSS, combined and compressed Javascript and will copy all images, fonts, etc.
