@@ -35,6 +35,19 @@
 
 }
 
+// @include button-reset;
+@mixin button-reset {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	font-family: $font-family;
+	padding: 0;
+	margin: 0;
+	user-select: none;
+	transition: all .2s ease;
+	-webkit-appearance: none;
+}
+
 // @include column(2);
 @mixin column($value) {
 	width: calc(100% / (#{$grid-columns} / #{$value}));
@@ -112,11 +125,11 @@
 	}
 }
 
-// @include position-absolute($top: 10px, $left: 10px);
-@mixin position-absolute($top: null, $right: null, $bottom: null, $left: null) {
+// @include position($position: absolute, $top: 10px, $left: 10px);
+@mixin position($position: null, $top: null, $right: null, $bottom: null, $left: null) {
     bottom: $bottom;
     left: $left;
-    position: absolute;
+    position: $position;
     right: $right;
     top: $top;
 }
