@@ -103,6 +103,13 @@
 	padding: 0;
 }
 
+// @include theme(dark) {}
+@mixin theme($value) {
+	@media (prefers-color-scheme: $value) {
+		@content;
+	}
+}
+
 // @include momentum-scroll;
 @mixin momentum-scroll {
 	overflow-y: scroll;
