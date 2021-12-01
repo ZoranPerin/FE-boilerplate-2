@@ -19,7 +19,7 @@ gulp.task('scss', function () {
     return gulp.src(config.resources + 'sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(gcmq())
-        .pipe(cssnano())
+        .pipe(cssnano({ zindex: false }))
         .pipe(autoprefixer())
         .pipe(gulp.dest(config.destination + 'css'))
 });
