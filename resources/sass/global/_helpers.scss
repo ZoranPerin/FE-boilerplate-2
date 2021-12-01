@@ -34,87 +34,44 @@
 
 }
 
+
 .margin {
 
-    &-bottom {
+	@each $position in $positions {
 
-        &-5 {
-            margin-bottom: 5px;
-        }
+		&-#{$position} {
 
-        &-10 {
-            margin-bottom: 10px;
-        }
+			@each $value in $values {
 
-        &-15 {
-            margin-bottom: 15px;
-        }
+				&-#{$value} {
+					margin-#{$position}: #{$value}px;
+				}
 
-        &-20 {
-            margin-bottom: 20px;
-        }
+			}
 
-    }
+		}
 
-    &-left {
+	}
 
-        &-5 {
-            margin-left: 5px;
-        }
+}
 
-        &-10 {
-            margin-left: 10px;
-        }
+.padding {
 
-        &-15 {
-            margin-left: 15px;
-        }
+	@each $position in $positions {
 
-        &-20 {
-            margin-left: 20px;
-        }
+		&-#{$position} {
 
-    }
+			@each $value in $values {
 
-    &-right {
+				&-#{$value} {
+					padding-#{$position}: #{$value}px;
+				}
 
-        &-5 {
-            margin-right: 5px;
-        }
+			}
 
-        &-10 {
-            margin-right: 10px;
-        }
+		}
 
-        &-15 {
-            margin-right: 15px;
-        }
-
-        &-20 {
-            margin-right: 20px;
-        }
-
-    }
-
-    &-top {
-
-        &-5 {
-            margin-top: 5px;
-        }
-
-        &-10 {
-            margin-top: 10px;
-        }
-
-        &-15 {
-            margin-top: 15px;
-        }
-
-        &-20 {
-            margin-top: 20px;
-        }
-
-    }
+	}
 
 }
 

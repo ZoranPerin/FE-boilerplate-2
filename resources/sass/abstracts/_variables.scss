@@ -32,6 +32,10 @@ $color-instagram: #833ab4;
 $margin: 20px;
 $padding: 20px;
 
+// Margin & padding loop
+$values: 5 10 20 30 40;
+$positions: top right bottom left;
+
 // Image path
 $image-path: '../images/';
 
