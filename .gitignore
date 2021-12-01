@@ -34,6 +34,7 @@ Thumbs.db
 *.exe
 *.o
 *.so
+assets/
 
 # ignore packaged files
 *.7z
