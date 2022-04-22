@@ -1,6 +1,5 @@
 // dependencies
 var gulp = require('gulp');
-var merge = require('merge-stream');
 var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
